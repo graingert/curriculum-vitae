@@ -15,7 +15,7 @@
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
@@ -24,18 +24,18 @@
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\firstname{John}
-\familyname{Doe}
-\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\mobile{+1~(234)~567~890}                          % optional, remove / comment the line if not wanted
-\phone{+2~(345)~678~901}                           % optional, remove / comment the line if not wanted
-\fax{+3~(456)~789~012}                             % optional, remove / comment the line if not wanted
-\email{john@doe.org}                               % optional, remove / comment the line if not wanted
-\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\firstname{Thomas}
+\familyname{Grainger}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{18 Godwin Close}{SO225JN Winchester}{England}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\mobile{+44~(7733)~933~161}                          % optional, remove / comment the line if not wanted
+%\phone{+2~(345)~678~901}                           % optional, remove / comment the line if not wanted
+%\fax{+3~(456)~789~012}                             % optional, remove / comment the line if not wanted
+\email{mail@graingert.co.uk}                               % optional, remove / comment the line if not wanted
+\homepage{graingert.co.uk}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -54,69 +54,94 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\begin{minipage}{\linewidth}
 \section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\cventry{2009--2013}{
+  MEng Computer Science
+  \href{http://www.ecs.soton.ac.uk/programmes/g401-meng-computer-science-4-yrs}{G401}
+}{University of Southampton}{}{\textit{}}{}
+\cventry{2007--2009}{A Level}{Peter Symonds College}{Winchester}{}{
+  \begin{itemize}%
+    \item A2 Maths, A
+    \item A2 Further Maths: A
+    \item A2 Physics: A
+    \item A2 Chemistry: B
+    \item AS Biology: B
+  \end{itemize}
+}
+\cventry{2003--2007}{10 GCSEs A*-C}{The Westgate School}{Winchester}{}{}
+\end{minipage}
 
-\section{Master thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Supervisors}
-\cvitem{description}{Short thesis abstract}
 
+%\section{Master thesis}
+%\cvitem{title}{\emph{Title}}
+%\cvitem{supervisors}{Supervisors}
+%\cvitem{description}{Short thesis abstract}
+
+\begin{minipage}{\linewidth}
 \section{Experience}
 \subsection{Vocational}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
-\begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
-  \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3.
-\end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+\cventry{Summer Internship}{Research Assistant}{University of Southampton, Web and Internet Science Research Group}{}{}{
+  Investigating University IT Security and developing web tools related to eduroam (\textit{edu}cation \textit{roam}ing) network security.
+}
+\cventry{Summer Internship}{Formal Test}{IBM Storage Subsystems}{Hursley}{}{
+  Formal test for the IBM Storwize v7000, announced in October 2010 requiring the use of the \href{http://www.lecroy.com/ProtocolAnalyzer/ProtocolOverview.aspx?seriesid=147}{LeCroy SAS Sierra M6-4} Protocol Analyser/Jammer
+}
+\cventry{Summer Internship}{Formal Test}{IBM Storage Subsystems}{Hursley}{}{
+  Developed a system for storing RAID performance results and web-based front end for analysing those results: ``Perfweb''. This system was built using the Python web framework Django, HTML, JavaScript and CSS.
+}
+\end{minipage}
+\begin{minipage}{\linewidth}
 \subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\cventry{Work Experience}{Developer}{IBM Storage Subsystems}{Hursley}{}{
+  Multiple small work experience summers developing ``pl\_scsi'' a Cluster based SCSI command injector in C and a web based error log decoder in Perl. Both of these projects required use of the Finisar Fibre Channel Protocol Analyser/Jammer.
+}
+\end{minipage}
 
+\begin{minipage}{\linewidth}
 \section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
+\cvitemwithcomment{Python}{Extremely Competent}{With contributions to Open Source projects such as Celery, eventlet and maintainer of python-clamav}
+\cvitemwithcomment{JavaScript}{Competent}{Including use of jQuery, Backbone.js, Ember.js and Angular.js}
+\cvitemwithcomment{Java}{Competent}{Including Swing, Threading and RMI}
+\cvitemwithcomment{C/C++}{Some Experience}{Simple allocator implementation, OpenGL graphics project}
+\cvitemwithcomment{PHP, Ruby}{Some Experience}{Simple web applications, security patches to existing systems}
+\end{minipage}
 
+\begin{minipage}{\linewidth}
 \section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\cvitem{Source Control}{git, GitHub, Subversion and CMVC}
+\cvitem{Testing}{Automated test tools, nostests, JUnit. Continuous Integration tools such as Travis-CI}
+\cvitem{Web Technologies}{HTML and HTML5 technologies such as WebSockets, Semantic Web technologies such as RDF and SPARQL}
+\cvitem{Frameworks}{Django, Flask, Rails etc}
+\cvitem{Distributed Computing}{Celery, RabbitMQ}
+\cvitem{Databases}{MySQL/MariaDB, PostgreSQL and Redis}
+\end{minipage}
 
+\begin{minipage}{\linewidth}
 \section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\cvitem{Hobby Computing}{Written my own ``home-brew'' code for the Nintendo Wii.}
+\cvitem{Scouting}{Since 1998, including in Summer 2009 a mountaineering trip to Kandersteg, Switzerland, where I achieved the successful ascent of Wildstrubel (height 3,243 m), as part of a two day expedition.}
+\cvitem{Ice Skating}{Figure Skating, UK Skate Gold award}
+\end{minipage}
 
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
-
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
+\begin{minipage}{\linewidth}
 \section{References}
 \begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+  \cvcolumn{IBM Internships}{
+    Jon Short\\
+    IBM SSG Hursley\\
+    SAN Volume Controller, Regression Test Team Leader\\
+    [Contact Details on Request]
+  }
+  \cvcolumn{University of Southampton Internship}{
+    \href{http://id.ecs.soton.ac.uk/person/446}{Dr Tim Chown}\\
+    ECS, Faculty of Physical and Applied Sciences\\
+    University of Southampton\\
+    \href{mailto:tjc@ecs.soton.ac.uk}{tjc@ecs.soton.ac.uk}
+  }
 \end{cvcolumns}
+\end{minipage}
+
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
@@ -133,28 +158,6 @@ Detailed achievements:%
 %\nocitemisc{misc1,misc2,misc3}
 %\bibliographystylemisc{plain}
 %\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-\clearpage
-%-----       letter       ---------------------------------------------------------
-% recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-Albert Einstein discovered that $e=mc^2$ in 1905.
-
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-
-\makeletterclosing
 
 %\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
