@@ -5,7 +5,7 @@ install:
   - sudo apt-get install -qq plowshare latex-xcolor texlive-latex-extra texlive-fonts-recommended
   - wget https://launchpad.net/moderncv/trunk/1.3.0/+download/moderncv-1.3.0.zip -O moderncv.zip
   - unzip moderncv.zip
-  - mv mv moderncv/* .
+  - mv moderncv/* .
   - wget https://en.gravatar.com/avatar/05917fed26d7519fae8318f78d14592a?s=512\&r=g -O picture.jpg
 script:
   - "make"
