@@ -10,15 +10,17 @@ install:
 - mv moderncv/* .
 - wget https://en.gravatar.com/avatar/05917fed26d7519fae8318f78d14592a?s=512\&r=g
   -O picture.jpg
-- wget https://raw.github.com/graingert/Dropbox-Uploader/patch-1/dropbox_uploader.sh -O dropbox_uploader.sh
+- wget https://raw.github.com/graingert/Dropbox-Uploader/patch-1/dropbox_uploader.sh
+  -O dropbox_uploader.sh
 script:
 - make
 after_success:
-  - if [ "$DROPBOX_UPLOADER" ]; then bash dropbox_uploader.sh upload cv.pdf; fi
+- if [ "$DROPBOX_UPLOADER" ]; then bash dropbox_uploader.sh upload cv.pdf; fi
 env:
   global:
-  - secure: ! 'ayH049kWEI48UqBztemlXEf6aLHWRCQvU2fpPlNpa5Hd8919LG9ltgxDQm1O
-
-      T46nxrLmRqEa0MUeOepoD6q+iGkEGzMqtnsTrq7VaOcaG7usUlxW/r/Gx8Ac
-
-      ZQZPu5sQQIl4C7JcmyN4qRQ0dVXkvsZdHYIWQDsyTaFYATXyIag='
+  - secure: "aAIAgV6cNaPqfxgHXqWbL3+XZ5HLswnZ6GUJ/yNa4ngISlqffTCGpTDG/Y1G\nseKfPkIoa2yLfn3nninM586aAMaaBFwx9Tu65j5zzfcoQdTHH6f3IAQqKCjC\ntLNMCeqsYTq5QriRx+jNTveAKng3G3xkT/l0PBYPYJnqqRrXNXY="
+  - secure: "Uan2Lr6yoXac6McSwUkhT1Rwe3JUaOnjuCBFTkeNXXLc4JqN1112oyZHKDsg\ngQgirjkDSOHR/THLPe6hbJxJ1K3B+u+zTahmp8zOTxYxUYrpukAlA2GJCkAD\nhRxXRri8rsmdm5Ld1eii170sCMeDcSqfXmAW2ELn6bWyULwD4dI="
+  - secure: "b5SBuiW6ll/By/AQFo3jhdIWC+jt3r8a1m8iY0rVB4c/4MXLznrJGXr8ks2a\nO3wM1996IbwvVUnPuzyQjzk55uQWk9xqo0N1k9+6w8FITOgIYFhW9NP6E7Vn\nNGeelL0MicBa3lwzzEdzlWdUbv62KR7C+d45IQTJOMenFZG1Q2I="
+  - secure: "lS2A8e+HW8XDiKFf7HEg4TqA5iY0HZg9Ufuyl3aPItQFzGvmxNk+E3NbQkmI\nTxr40mWoEaxjZpcJSoCf7g1JLejm7THKX20zLx0h/fMicqfoo6i1xUbtltJE\niQuvZZS3MXrjEv4PbUpI4XxnEDiBiM4nXSDHTcUMxRW+UDX2HvM="
+  - secure: "bH9ycdyvlAgEjFucINrbtMKF/hDMRcOe+AvpqI8YVlB42TXBF/R/yWF7PkGr\n8EvormrMS8M4nDLCPzUxaKdKCzEsqZRK8aSIbGnX1F5AglUGa4L/exOUm8Do\nmhe36j/l2g1fgwUviCW3RRYIZPeypZecKU/Y89G2/kEIKXIOk3s="
+  - secure: "CdRh4rsMQj4KW1MV8wy6WGco3VbbFzTQC1MltNlx/MTrJn6+uSPsDcLGoY1s\nLNsB9w7b1t4gSFSlTHexpRhWgfxW1Ka1SGLd8Sj5ugaN0oxt7AsSiqv8ao1R\n1Sy6QvUYSTaQqRVdQdtOdJYV/mlI9oLwdBBpSv6HgGbBssQJ+sE="
