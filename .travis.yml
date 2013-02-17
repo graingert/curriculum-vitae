@@ -1,12 +1,24 @@
+---
 install:
-  - yes | sudo apt-add-repository ppa:plowsharepackagers/ppa
-  - yes | sudo apt-add-repository ppa:texlive-backports/ppa
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq plowshare latex-xcolor texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
-  - wget https://launchpad.net/moderncv/trunk/1.3.0/+download/moderncv-1.3.0.zip -O moderncv.zip
-  - unzip moderncv.zip
-  - mv moderncv/* .
-  - wget https://en.gravatar.com/avatar/05917fed26d7519fae8318f78d14592a?s=512\&r=g -O picture.jpg
+- yes | sudo apt-add-repository ppa:texlive-backports/ppa
+- sudo apt-get update -qq
+- sudo apt-get install -qq latex-xcolor texlive-latex-extra texlive-fonts-recommended
+  texlive-fonts-extra
+- wget https://launchpad.net/moderncv/trunk/1.3.0/+download/moderncv-1.3.0.zip -O
+  moderncv.zip
+- unzip moderncv.zip
+- mv moderncv/* .
+- wget https://en.gravatar.com/avatar/05917fed26d7519fae8318f78d14592a?s=512\&r=g
+  -O picture.jpg
+- wget https://raw.github.com/graingert/Dropbox-Uploader/patch-1/dropbox_uploader.sh -O dropbox_uploader.sh
 script:
-  - "make"
-after_success: plowup bayfiles cv.pdf
+- make
+after_success:
+  - if [ "$DROPBOX_UPLOADER" ]; then bash dropbox_uploader.sh upload cv.pdf; fi
+env:
+  global:
+  - secure: ! 'ayH049kWEI48UqBztemlXEf6aLHWRCQvU2fpPlNpa5Hd8919LG9ltgxDQm1O
+
+      T46nxrLmRqEa0MUeOepoD6q+iGkEGzMqtnsTrq7VaOcaG7usUlxW/r/Gx8Ac
+
+      ZQZPu5sQQIl4C7JcmyN4qRQ0dVXkvsZdHYIWQDsyTaFYATXyIag='
