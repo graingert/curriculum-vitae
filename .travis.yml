@@ -8,8 +8,6 @@ install:
   moderncv.zip
 - unzip moderncv.zip
 - mv moderncv/* .
-- wget https://en.gravatar.com/avatar/05917fed26d7519fae8318f78d14592a?s=512\&r=g
-  -O picture.jpg
 - wget https://raw.github.com/graingert/Dropbox-Uploader/patch-1/dropbox_uploader.sh
   -O dropbox_uploader.sh
 script:
