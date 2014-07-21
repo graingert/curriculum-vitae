@@ -23,6 +23,7 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+\usepackage{multicol}
 % personal data
 \firstname{Thomas}
 \familyname{Grainger}
@@ -59,22 +60,27 @@
 \cventry{2009--2013}{MEng Computer Science
   \href{http://www.ecs.soton.ac.uk/programmes/g401-meng-computer-science-4-yrs}{G401}}{University of Southampton}{}{}{}
 \cventry{2007--2009}{A Level}{Peter Symonds College}{Winchester}{}{
-\begin{itemize}
-  \item A2 Maths, A
-  \item A2 Further Maths: A
-  \item A2 Physics: A
-  \item A2 Chemistry: B
-  \item AS Biology: B
-\end{itemize}
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item A2 Maths: A
+      \item A2 Further Maths: A
+      \item A2 Physics: A
+      \item A2 Chemistry: B
+      \item AS Biology: B
+    \end{itemize}
+  \end{multicols}
 }
 \cventry{2003--2007}{10 GCSEs A*-C Including English, Maths and Science}{The Westgate School}{Winchester}{}{}
 \end{minipage}
 
 
-%\section{Master thesis}
-%\cvitem{title}{\emph{Title}}
-%\cvitem{supervisors}{Supervisors}
-%\cvitem{description}{Short thesis abstract}
+\section{Fourth year dissertation}
+\cvitem{Title}{\emph{Remaining Anonymous when using the Bitcoin Protocol}}
+\cvitem{Supervisor}{Dr. Tim Chown}
+\cvitem{Description}{Investigates the methods used for de-anonymizing or revealing
+the identity of users of the Bitcoin network and how these methods can be avoided
+as well as proposing a novel automated solution to the issue of such de-anonymizing
+techniques.}
 
 \begin{minipage}{\linewidth}
 \vspace{3ex}
@@ -131,7 +137,7 @@
     [Contact Details on Request]
   }
   \cvcolumn{University of Southampton Internship}{
-    \href{http://id.ecs.soton.ac.uk/person/446}{Dr Tim Chown}\\
+    \href{http://id.ecs.soton.ac.uk/person/446}{Dr. Tim Chown}\\
     ECS, Faculty of Physical and Applied Sciences\\
     University of Southampton\\
     \href{mailto:tjc@ecs.soton.ac.uk}{tjc@ecs.soton.ac.uk}
