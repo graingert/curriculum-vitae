@@ -49,11 +49,6 @@
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
-\makeatletter
-\newcommand\hreffootnote@[2]{\href{#1}{#2}\footnote{\hyper@linkurl{\Hurl{#1}}{#2}}}
-\DeclareRobustCommand{\hreffootnote}{\hyper@normalise\hreffootnote@}
-\makeatother
-
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
@@ -62,7 +57,7 @@
 \begin{minipage}{\linewidth}
 \section{Education}
 \cventry{2009--2013}{MEng Computer Science
-  \hreffootnote{http://www.ecs.soton.ac.uk/programmes/g401-meng-computer-science-4-yrs}{G401}}{University of Southampton}{}{}{}
+  \href{http://www.ecs.soton.ac.uk/programmes/g401-meng-computer-science-4-yrs}{G401}}{University of Southampton}{}{}{}
 \cventry{2007--2009}{A Level}{Peter Symonds College}{Winchester}{}{
 \begin{itemize}
   \item A2 Maths, A
@@ -93,7 +88,7 @@
   Developed a system for storing RAID performance results and web-based front end for analysing those results: ``Perfweb''. This system was built using the Python web framework Django, HTML, JavaScript and CSS.
 }
 \cventry{Summer 2010}{Formal Test}{IBM Storage Subsystems Group}{Hursley}{}{
-  Formal test for the IBM Storwize v7000, announced in October 2010 requiring the use of the \hreffootnote{http://www.lecroy.com/ProtocolAnalyzer/ProtocolOverview.aspx?seriesid=147}{LeCroy SAS Sierra M6-4} Protocol Analyser/Jammer.
+  Formal test for the IBM Storwize v7000, announced in October 2010 requiring the use of the \href{http://www.lecroy.com/ProtocolAnalyzer/ProtocolOverview.aspx?seriesid=147}{LeCroy SAS Sierra M6-4} Protocol Analyser/Jammer.
 }
 \cventry{Summers 2006--2008}{Developer}{IBM Storage Subsystems Group}{Hursley}{}{
   Multiple small work experience summers developing ``pl\_scsi'' a Cluster based SCSI command injector in C and a web based error log decoder in Perl. Both of these projects required use of the Finisar Fibre Channel Protocol Analyser/Jammer.
@@ -113,7 +108,7 @@
 \begin{minipage}{\linewidth}
 \vspace{3ex}
 \section{Computer skills}
-\cvitem{Source Control}{Git, GitHub, Subversion and \hreffootnote{https://en.wikipedia.org/wiki/CMVC}{CMVC}.}
+\cvitem{Source Control}{Git, GitHub, Subversion and \href{https://en.wikipedia.org/wiki/CMVC}{CMVC}.}
 \cvitem{Testing}{Automated test tools such as nose and JUnit, Continuous Integration tools such as Travis-CI.}
 \cvitem{Web Technologies}{HTML and HTML5 technologies such as WebSockets, Semantic Web technologies such as RDF and SPARQL.}
 \cvitem{Frameworks}{Django, Flask and Rails.}
