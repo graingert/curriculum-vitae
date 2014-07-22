@@ -23,6 +23,7 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+\usepackage{multicol}
 % personal data
 \firstname{Thomas}
 \familyname{Grainger}
@@ -59,48 +60,50 @@
 \cventry{2009--2013}{MEng Computer Science
   \href{http://www.ecs.soton.ac.uk/programmes/g401-meng-computer-science-4-yrs}{G401}}{University of Southampton}{}{}{}
 \cventry{2007--2009}{A Level}{Peter Symonds College}{Winchester}{}{
-\begin{itemize}
-  \item A2 Maths, A
-  \item A2 Further Maths: A
-  \item A2 Physics: A
-  \item A2 Chemistry: B
-  \item AS Biology: B
-\end{itemize}
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item A2 Maths: A
+      \item A2 Further Maths: A
+      \item A2 Physics: A
+      \item A2 Chemistry: B
+      \item AS Biology: B
+    \end{itemize}
+  \end{multicols}
 }
 \cventry{2003--2007}{10 GCSEs A*-C Including English, Maths and Science}{The Westgate School}{Winchester}{}{}
 \end{minipage}
 
 
-%\section{Master thesis}
-%\cvitem{title}{\emph{Title}}
-%\cvitem{supervisors}{Supervisors}
-%\cvitem{description}{Short thesis abstract}
+\section{Fourth year dissertation}
+\cvitem{Title}{\emph{Remaining Anonymous when using the Bitcoin Protocol}}
+\cvitem{Supervisor}{Dr. Tim Chown}
+\cvitem{Description}{Investigates the methods used for de-anonymizing or revealing
+the identity of users of the Bitcoin network and how these methods can be avoided
+as well as proposing a novel automated solution to the issue of such de-anonymizing
+techniques.}
 
 \begin{minipage}{\linewidth}
 \vspace{3ex}
 \section{Experience}
 \cventry{Summer 2012}{Research Assistant}{University of Southampton, Web and Internet Science Research Group}{}{}{
   Investigated University IT security and enhanced a PHP prototype web application related to the security of the eduroam world-wide roaming access service.
-  Specifically the application was rearchitected to use client-side templating, REST methodologies and avoid simple security flaws such as CSRF and XSS.
+  Specifically security vulnerabilities such as XSS and CSRF were removed and the application was rearchitected to use front-end rednering with AngularJS communicating to an HTTP API backend.
   Part of this process involved porting the code to Django, with raw SQL being converted to the equivalent Django ORM queries.
 }
-\cventry{Summer 2011}{Formal Test}{IBM Storage Subsystems Group}{Hursley}{}{
-  Developed a system for storing RAID performance results and web-based front end for analysing those results: ``Perfweb''. This system was built using the Python web framework Django, HTML, JavaScript and CSS.
-}
-\cventry{Summer 2010}{Formal Test}{IBM Storage Subsystems Group}{Hursley}{}{
+\cventry{Summer 2010 and 2011}{Formal Test}{IBM Storage Subsystems Group}{Hursley}{}{
+  Developed an application to parse and store RAID performance test results and Django website for analysing those results: ``Perfweb''.
   Formal test for the IBM Storwize v7000, announced in October 2010 requiring the use of the \href{http://www.lecroy.com/ProtocolAnalyzer/ProtocolOverview.aspx?seriesid=147}{LeCroy SAS Sierra M6-4} Protocol Analyser/Jammer.
 }
 \cventry{Summers 2006--2008}{Developer}{IBM Storage Subsystems Group}{Hursley}{}{
-  Multiple small work experience summers developing ``pl\_scsi'' a Cluster based SCSI command injector in C and a web based error log decoder in Perl. Both of these projects required use of the Finisar Fibre Channel Protocol Analyser/Jammer.
+  Multiple short work experience summers developing ``pl\_scsi'' a Cluster based SCSI command injector in C and a web based error log decoder in Perl. Both of these projects required use of the Finisar Fibre Channel Protocol Analyser/Jammer.
 }
 \end{minipage}
 
 \begin{minipage}{\linewidth}
 \vspace{3ex}
 \section{Programming Languages}
-\cvitemwithcomment{Python}{Expert}{With contributions to Open Source projects such as Celery and Eventlet. Maintainer of \href{http://github.com/graingert/python-clamd}{python-clamd}.}
-\cvitemwithcomment{JavaScript}{Competent}{Including use of jQuery, Backbone.js, Ember.js and Angular.js.}
-\cvitemwithcomment{Java}{Competent}{Including Swing, Threading and RMI.}
+\cvitemwithcomment{Python}{Expert}{With contributions to open source projects such as Celery and Eventlet. Maintainer of \href{http://github.com/graingert/python-clamd}{python-clamd}.}
+\cvitemwithcomment{JavaScript}{Competent}{From jQuery to AngularJS, with open source contributions. Maintainer of the NPM package slimerjs.} \cvitemwithcomment{Java}{Competent}{Including Swing, Threading and RMI.}
 \cvitemwithcomment{C/C++}{Some Experience}{Simple allocator implementation, OpenGL graphics project.}
 \cvitemwithcomment{PHP, Perl, Ruby}{Some Experience}{Simple web applications, security patches to existing systems.}
 \end{minipage}
@@ -108,9 +111,9 @@
 \begin{minipage}{\linewidth}
 \vspace{3ex}
 \section{Computer skills}
-\cvitem{Source Control}{Git, GitHub, Subversion and \href{https://en.wikipedia.org/wiki/CMVC}{CMVC}.}
-\cvitem{Testing}{Automated test tools such as nose and JUnit, Continuous Integration tools such as Travis-CI.}
-\cvitem{Web Technologies}{HTML and HTML5 technologies such as WebSockets, Semantic Web technologies such as RDF and SPARQL.}
+\cvitem{Source Control}{Git (GitHub) Subversion and \href{https://en.wikipedia.org/wiki/CMVC}{CMVC}.}
+\cvitem{Testing}{Developed using TDD with automated test tools including nose, py.test and tox. Advanced use and configation of Jenkins jobs, slaves and executors.}
+\cvitem{Web Technologies}{HTML technologies such as WebSockets, Semantic Web technologies such as RDF and SPARQL.}
 \cvitem{Frameworks}{Django, Flask and Rails.}
 \cvitem{Distributed Computing}{Celery, RabbitMQ.}
 \cvitem{Databases}{MySQL/MariaDB, PostgreSQL and Redis.}
@@ -119,9 +122,8 @@
 \begin{minipage}{\linewidth}
 \vspace{3ex}
 \section{Interests}
+\cvitem{Cybersecurity Workshop}{Wrote and delivered security workshop teaching Wi-Fi, Web and Network penetration testing.}
 \cvitem{Hobby Computing}{Written my own ``home-brew'' code for the Nintendo Wii.}
-\cvitem{Scouting}{Since 1998, including in Summer 2009 a mountaineering trip to Kandersteg, Switzerland, where I achieved the successful ascent of Wildstrubel (height 3,243 m), as part of a two day expedition.}
-\cvitem{Ice Skating}{Figure Skating, UK Skate Gold award.}
 \end{minipage}
 
 \begin{minipage}{\linewidth}
@@ -135,7 +137,7 @@
     [Contact Details on Request]
   }
   \cvcolumn{University of Southampton Internship}{
-    \href{http://id.ecs.soton.ac.uk/person/446}{Dr Tim Chown}\\
+    \href{http://id.ecs.soton.ac.uk/person/446}{Dr. Tim Chown}\\
     ECS, Faculty of Physical and Applied Sciences\\
     University of Southampton\\
     \href{mailto:tjc@ecs.soton.ac.uk}{tjc@ecs.soton.ac.uk}
